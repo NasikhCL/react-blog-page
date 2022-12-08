@@ -19,7 +19,7 @@ const [data, setData] = useState([])
     <div className="App">
       <Navbar />
       <div className='blogs'>
-      {data.length > 0 ? data.map((item, index) =>{
+      { data && data.length > 0 ? data.map((item, index) =>{
           return(
             <Card key={index}  item={item} /> 
           )
