@@ -6,6 +6,6 @@ install all the  dependencies
 please run on your local system https://localhost:3000
 
 ## screenShot
-[page-screenshot](./screenshot.jpeg)
+![page screenshot](./screenshot.jpeg)
 
 
