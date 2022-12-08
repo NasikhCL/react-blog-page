@@ -5,7 +5,7 @@ clone this project : ``` git clone https://github.com/NasikhCL/react-blog-page.g
 install all the  dependencies 
 please run on your local system https://localhost:3000
 
-## screenShot
+## Screenshot
 ![page screenshot](./screenshot.jpeg)
 
 
