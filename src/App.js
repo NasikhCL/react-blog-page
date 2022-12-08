@@ -3,11 +3,11 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Card from './components/Card';
 import Navbar from './components/Navbar';
-
+// 07d70fd9fb4d4e5192e1aa45e5a7b17a
 function App() {
 const [data, setData] = useState([])
   useEffect(()=>{
-    fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=300be0372ce64ead840346911752051c')
+    fetch('https://newsapi.org/v2/everything?q=tesla&from=2022-11-08&sortBy=publishedAt&apiKey=07d70fd9fb4d4e5192e1aa45e5a7b17a')
     .then(res => res.json())
     .then(data=> setData(data.articles) )
 
