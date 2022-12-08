@@ -6,19 +6,10 @@ import Navbar from './components/Navbar';
 // 07d70fd9fb4d4e5192e1aa45e5a7b17a
 function App() {
 
-  const NewsAPI = require('newsapi');
-  const newsapi = new NewsAPI('07d70fd9fb4d4e5192e1aa45e5a7b17a');
-
   const [data, setData] = useState([])
   useEffect(()=>{
 
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': '43f1bd7fb7mshf340ae335901eeap185a3cjsn6edb7ac3a71b',
-        'X-RapidAPI-Host': 'contextualwebsearch-websearch-v1.p.rapidapi.com'
-      }
-    };
+   
     
     // fetch('https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI?q=taylor%20swift&pageNumber=1&pageSize=10&autoCorrect=true', options)
     //   .then(response => response.json())
@@ -26,9 +17,9 @@ function App() {
     //   .catch(err => console.error(err));
   
     
-    fetch('https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI?q=taylor%20swift&pageNumber=1&pageSize=10&autoCorrect=true&fromPublishedDate=null&toPublishedDate=null', options)
+    fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=300be0372ce64ead840346911752051c')
       .then(response => response.json())
-      .then(response =>setData(response.value))
+      .then(response =>setData(response.articles))
       .catch(err => console.error(err));
   
   },[])
