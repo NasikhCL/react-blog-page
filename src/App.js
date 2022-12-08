@@ -18,7 +18,8 @@ function App() {
     //   .catch(err => console.error(err));
   
     
-    fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=300be0372ce64ead840346911752051c')
+    // fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=300be0372ce64ead840346911752051c')
+    fetch('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=07d70fd9fb4d4e5192e1aa45e5a7b17a')
       .then(response => response.json())
       .then(response =>setData(response.articles))
       .catch(err => console.error(err));
