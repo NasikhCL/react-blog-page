@@ -40,6 +40,8 @@ a{
   .blog-details{
     margin: auto;
     width: 95%;
+    height: 50%;
+    overflow: hidden;
   }
   .blog-details h5{
     color: black;
