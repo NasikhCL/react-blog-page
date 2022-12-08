@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Card from './components/Card';
 import Navbar from './components/Navbar';
-// 07d70fd9fb4d4e5192e1aa45e5a7b17a
+
+
 function App() {
 
   const [data, setData] = useState([])
