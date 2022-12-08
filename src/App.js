@@ -8,16 +8,24 @@ function App() {
 const [data, setData] = useState([])
   useEffect(()=>{
     fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=300be0372ce64ead840346911752051c')
-    .the n(res => res.json())
-    .then(data=> setData(data) )
+    .then(res => res.json())
+    .then(data=> setData(data.articles) )
 
   },[])
+
+  const items = data.map((item, index) =>{
+    return(
+      <Card key={index}  item={item} /> 
+    )
+  })
 
   console.log(data)
   return (
     <div className="App">
       <Navbar />
-      <Card />
+      <div className='blogs'>
+      {items}
+      </div>
     </div>
   );
 }
