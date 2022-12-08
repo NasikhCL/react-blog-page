@@ -17,14 +17,14 @@ const [data, setData] = useState([])
     return(
       <Card key={index}  item={item} /> 
     )
-  })
+  }) 
 
   console.log(data)
   return (
     <div className="App">
       <Navbar />
       <div className='blogs'>
-      {items}
+      {data.length > 0 ? items : <h2>Loading...</h2>}
       </div>
     </div>
   );
